@@ -22,6 +22,10 @@
 #ifndef __CTYPE_H
 #define __CTYPE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** Is a letter or a digit? 
 
     @param c = a character
@@ -165,5 +169,9 @@
 #define tolower(c$) \
   ({ int _c = c$; \
      ((isupper(_c))?(_c + 'a' - 'A'):_c); })
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

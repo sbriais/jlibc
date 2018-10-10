@@ -22,6 +22,10 @@
 #ifndef __JAGTYPES_H
 #define __JAGTYPES_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** A phrase is a 64 bit integer */
 typedef unsigned long long phrase;
 
@@ -38,5 +42,9 @@ typedef struct {
   phrase p3;
   phrase p4;
 } qphrase;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

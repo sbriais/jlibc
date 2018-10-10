@@ -25,6 +25,10 @@
 
 #include "stdint.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 struct tom_registers {
   /* 0x00 */
   /* memory configuration */
@@ -159,5 +163,9 @@ struct tom_registers {
 #define C_OPCLR (1 << 10)
 #define C_PITCLR (1 << 11)
 #define C_JERCLR (1 << 12)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

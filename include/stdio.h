@@ -28,6 +28,10 @@
 #include <stddef.h>
 #include <stdarg.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define EOF (-1)
 
 #define SEEK_SET        0       /* Seek from beginning of file.  */
@@ -90,5 +94,9 @@ int fseek(FILE *stream, long offset, int whence);
 
 /** Ftell */
 long ftell(FILE *stram);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

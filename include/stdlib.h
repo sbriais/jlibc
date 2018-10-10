@@ -25,6 +25,10 @@
 #include <stddef.h>
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define STACKSIZE (16*1024)
 
 /** Absolute value */
@@ -64,5 +68,9 @@ unsigned long rand();
 /** Initialises the pseudo-random numbers generator with the given
  * seed */
 void srand(unsigned long seed);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

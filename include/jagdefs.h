@@ -30,6 +30,10 @@
 #include "stdint.h"
 #include "jagtypes.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 extern const phrase stop_object;
 extern const uint16_t a_vde;
 extern const uint16_t a_vdb;
@@ -40,5 +44,9 @@ extern const uint16_t video_height;
 extern const uint16_t vblPerSec;
 
 extern void reset();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

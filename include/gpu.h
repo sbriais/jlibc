@@ -25,6 +25,10 @@
 
 #include "stdint.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 struct gpu_registers {
   /* 0x00 */
   volatile uint32_t gpu_flags;
@@ -97,5 +101,9 @@ struct gpu_registers {
 #define LFU_AN (0x4 << 21)
 #define LFU_A (0x8 << 21)
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

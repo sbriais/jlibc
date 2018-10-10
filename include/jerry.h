@@ -25,6 +25,10 @@
 
 #include "stdint.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 struct jerry_registers {
   /* 0x00 */
   volatile uint16_t jpit1_wo[2];
@@ -114,5 +118,9 @@ struct jerry_registers {
 #define ASI_OE (1 << 11)
 #define ASI_SERIN (1 << 13)
 #define ASI_ERROR (1 << 15)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
